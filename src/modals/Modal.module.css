@@ -1,0 +1,33 @@
+.account {
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.title {
+  color: rgb(12, 35, 35);
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+.leafImag {
+  height: 50px;
+  margin-left: 5px;
+}
+.form_input:focus {
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+}
+p {
+  line-height: normal;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+@media (min-width: 992px) {
+  .modal {
+    max-width: 1000px;
+  }
+}

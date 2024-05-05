@@ -1,0 +1,51 @@
+.leaf > img {
+  margin-top: 5vh;
+  height: 45vh;
+  transition: filter 0.3s ease;
+}
+.leafpng {
+  filter: drop-shadow(0px 0px 10px rgba(201, 232, 200, 0.8));
+}
+.leafpng:hover {
+  filter: drop-shadow(0px 0px 10px rgba(108, 191, 107, 0.8));
+}
+
+.hero_main {
+  height: 120vh;
+  background-color: rgb(12, 35, 35);
+  color: white;
+}
+.install_button {
+  display: flex;
+  padding-inline: 30px;
+  color: white;
+  background-color: rgb(20, 56, 56);
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid rgb(8, 22, 22);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.install_button:hover {
+  background-color: rgb(133, 194, 80);
+  color: rgb(245, 206, 69);
+  border: 2px solid rgb(245, 206, 69);
+}
+.install_button > a {
+  color: white;
+  margin: 5px;
+}
+
+/*card*/
+.card {
+  padding-inline: 2vw;
+  transition: transform 0.3s ease;
+}
+.body {
+  background-color: rgb(201, 212, 103);
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 5px rgba(108, 191, 107, 0.8));
+}
