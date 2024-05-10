@@ -1,0 +1,10 @@
+.image {
+  background-position: center;
+  background-image: url(https://media3.giphy.com/media/Lkm3w0PixNsn4dOPra/giphy.webp?cid=ecf05e47jw8ie12q4gef0q8d2pg2vrv6yregft2p1cnmgb20&ep=v1_gifs_search&rid=giphy.webp&ct=g);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image_overlay {
+  color: rgb(0, 0, 0);
+  background-color: rgb(222, 222, 126, 0.4);
+}
