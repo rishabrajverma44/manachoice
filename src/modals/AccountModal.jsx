@@ -51,24 +51,22 @@ const AccountModal = () => {
           }
         );
         if (response) {
-          console.log(response);
+          if (response.data.status === 200) {
+            console.log("success");
+            console.log(response);
+            if (true) {
+              setIsOTPModalOpen(false);
+              setIsConfirmationModalOpen(true);
+            } else {
+              toast.error("OTP verification failed. Please try again.");
+            }
 
-          // // Verify OTP
-          // const verifyResponse = await axios.post('', { otp });
-          // const { success } = verifyResponse.data;
-
-          // if (isOTPModalOpen) {
-          //   // Perform OTP verification API call
-          //   const otpVerificationSuccess = true; // Replace with your API call result
-          //   if (otpVerificationSuccess) {
-          //     setIsOTPModalOpen(false);
-          //     setIsConfirmationModalOpen(true);
-          //   } else {
-          //     toast.error("OTP verification failed. Please try again.");
-          //   }
-          // } else {
-          //   toast.error("Wrong username or password");
-          // }
+            if (isOTPModalOpen) {
+              // Perform OTP verification API call
+            } else {
+              toast.error("Wrong username or password");
+            }
+          }
 
           // setIsSubmitting(false);
           // actions.setSubmitting(false);
@@ -87,7 +85,7 @@ const AccountModal = () => {
   const handleConfirmation = async () => {
     setIsSubmitting(true);
     // Perform account deletion API call
-    const accountDeletionSuccess = true; // Replace with your API call result
+    const accountDeletionSuccess = true;
     if (accountDeletionSuccess) {
       toast.success("Your account deleted successfully");
       setIsConfirmationModalOpen(false);

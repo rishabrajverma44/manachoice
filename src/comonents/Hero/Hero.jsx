@@ -25,7 +25,7 @@ const Hero = () => {
   ];
 
   return (
-    <>
+    <div style={{ background: "rgb(12, 35, 35)" }}>
       <div class={styles.hero_main}>
         <div
           className={`d-flex justify-content-center flex-column align-items-center ${styles.leaf}`}
@@ -62,7 +62,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

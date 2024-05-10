@@ -4,12 +4,23 @@ import styles from "../Hero/Hero.module.css";
 const Cards = (props) => {
   const cardData = props.data;
   return (
-    <div>
-      <div className={`col ${styles.card}`}>
-        <div class="card">
-          <div class={`card-body ${styles.body}`}>
-            <h5 class="card-title text-center fw-bold">{cardData.cardTitle}</h5>
-            <p class="card-text">{cardData.cardDes}</p>
+    <div style={{ background: "rgb(12, 35, 35)" }}>
+      <div className={styles.agFormatContainer}>
+        <div className={styles.agCoursesBox}>
+          <div className={styles.agCoursesItem}>
+            <a href="#" className={styles.agCoursesItemLink}>
+              <div className={styles.agCoursesItemBg}></div>
+
+              <div className={styles.agCoursesItemTitle}>
+                {cardData.cardTitle}
+              </div>
+
+              <div
+                className={`${styles.agCoursesItemDateBox} ${styles.agCoursesItemDate}`}
+              >
+                {cardData.cardDes}
+              </div>
+            </a>
           </div>
         </div>
       </div>
