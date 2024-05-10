@@ -5,59 +5,105 @@ import Modal from "react-bootstrap/Modal";
 import styles from "./Modal.module.css";
 import leafImag from "../utils/leaf.png";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const AccountModal = () => {
   const [isFirstModalOpen, setIsFirstModalOpen] = useState(false);
   const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
+  const [isOTPModalOpen, setIsOTPModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("Username/Email is required"),
     password: Yup.string().required("Password is required"),
-    mnum: Yup.string()
-      .test(
-        "is-ten-digits",
-        "Mobile number should ideally be 10 digits",
-        function (value) {
-          if (!value) return true;
-          return value.length <= 10;
-        }
-      )
-      .matches(/^\d{10}$/, "Mobile number must be 10 digits")
-      .required("Mobile number required"),
   });
 
   const formik = useFormik({
     initialValues: {
       username: "",
       password: "",
-      mnum: "",
+      otp: "",
     },
     validationSchema,
     onSubmit: async (values, actions) => {
       actions.setSubmitting(true);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      if (values.username === "ram" && values.password === "123") {
-        setIsConfirmationModalOpen(true);
-        setIsFirstModalOpen(false);
-      } else {
-        setIsConfirmationModalOpen(false);
-        toast.error("Wrong username or password");
+      setIsSubmitting(true);
+      const username = values.username;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const mobileRegex = /^[0-9]{10}$/;
+      let loginType = "";
+      if (emailRegex.test(username)) {
+        loginType = "email";
+      } else if (mobileRegex.test(username)) {
+        loginType = "mobile";
       }
-      actions.setSubmitting(false);
-      actions.resetForm();
+
+      try {
+        const payload = { userName: values.username, inputType: loginType };
+        console.log(payload);
+        const response = await axios.post(
+          "https://newsehaloserver.onrender.com/api/v1/sendOtp",
+          payload,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if (response) {
+          console.log(response);
+
+          // // Verify OTP
+          // const verifyResponse = await axios.post('', { otp });
+          // const { success } = verifyResponse.data;
+
+          // if (isOTPModalOpen) {
+          //   // Perform OTP verification API call
+          //   const otpVerificationSuccess = true; // Replace with your API call result
+          //   if (otpVerificationSuccess) {
+          //     setIsOTPModalOpen(false);
+          //     setIsConfirmationModalOpen(true);
+          //   } else {
+          //     toast.error("OTP verification failed. Please try again.");
+          //   }
+          // } else {
+          //   toast.error("Wrong username or password");
+          // }
+
+          // setIsSubmitting(false);
+          // actions.setSubmitting(false);
+          // actions.resetForm();
+        }
+      } catch (error) {
+        alert("somthing went wrong....");
+        console.error("Error:", error);
+        setIsSubmitting(false);
+        actions.setSubmitting(false);
+        actions.resetForm();
+      }
     },
   });
 
-  const handleConfirmation = () => {
-    setIsConfirmationModalOpen(false);
-    toast.success("Your account deleted successfully");
+  const handleConfirmation = async () => {
+    setIsSubmitting(true);
+    // Perform account deletion API call
+    const accountDeletionSuccess = true; // Replace with your API call result
+    if (accountDeletionSuccess) {
+      toast.success("Your account deleted successfully");
+      setIsConfirmationModalOpen(false);
+    } else {
+      toast.error("Failed to delete account. Please try again.");
+    }
+    setIsSubmitting(false);
   };
 
   return (
     <div>
       <Modal
         show={isFirstModalOpen}
-        onHide={() => setIsFirstModalOpen(false)}
+        onHide={() => {
+          setIsFirstModalOpen(false);
+        }}
         style={{ marginTop: "20vh" }}
       >
         <Modal.Header closeButton>
@@ -96,21 +142,21 @@ const AccountModal = () => {
               <div className="text-danger">{formik.errors.password}</div>
             )}
 
-            <input
-              type="number"
-              name="mnum"
-              placeholder="Enter your mobile number"
-              className={`form-control mt-2 mb-2 ${styles.form_input}`}
-              onChange={(e) => {
-                if (e.target.value.length <= 10) {
-                  formik.handleChange(e);
-                }
-              }}
-              onBlur={formik.handleBlur}
-              value={formik.values.mnum}
-            />
-            {formik.touched.mnum && formik.errors.mnum && (
-              <div className="text-danger">{formik.errors.mnum}</div>
+            {isOTPModalOpen && (
+              <>
+                <input
+                  type="text"
+                  name="otp"
+                  placeholder="Enter OTP"
+                  className={`form-control mt-2 mb-2 ${styles.form_input}`}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.otp}
+                />
+                {formik.touched.otp && formik.errors.otp && (
+                  <div className="text-danger">{formik.errors.otp}</div>
+                )}
+              </>
             )}
           </form>
         </Modal.Body>
@@ -119,12 +165,13 @@ const AccountModal = () => {
             type="submit"
             className="btn btn-primary"
             onClick={formik.handleSubmit}
-            disabled={formik.isSubmitting}
+            disabled={formik.isSubmitting || isSubmitting}
           >
-            {formik.isSubmitting ? "Submitting..." : "Submit"}
+            {formik.isSubmitting || isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </Modal.Footer>
       </Modal>
+
       {isConfirmationModalOpen && (
         <Modal
           show={isConfirmationModalOpen}
@@ -137,8 +184,12 @@ const AccountModal = () => {
             <p>Are you sure you want to delete account?</p>
           </Modal.Body>
           <Modal.Footer>
-            <button className="btn btn-primary" onClick={handleConfirmation}>
-              Yes
+            <button
+              className="btn btn-primary"
+              onClick={handleConfirmation}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Deleting..." : "Yes"}
             </button>
             <button
               className="btn btn-secondary"
