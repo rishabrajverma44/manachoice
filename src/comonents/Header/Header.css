@@ -3,7 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgb(12, 35, 35);
+  color: white;
+  background-color: rgb(100, 100, 100);
 }
 #navbar {
   display: flex;

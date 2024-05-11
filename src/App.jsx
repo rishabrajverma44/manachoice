@@ -7,15 +7,19 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Information from "./comonents/Info/Information";
 import Footer from "./comonents/FooterSection/Footer";
+import Image from "./comonents/ImageCard/Image";
 
 const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Hero />
       <Information />
       <Footer />
-      <ToastContainer position="bottom-right" />
+      <ToastContainer position="bottom-right" /> */}
+
+      <Header />
+      <Image />
     </>
   );
 };
