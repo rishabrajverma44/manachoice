@@ -3,7 +3,7 @@ import styles from "./Information.module.css";
 
 const Information = () => {
   const content = `
-    <p class="card-text fst-italic fs-5 fw-bold"> &nbsp;&nbsp;&nbsp;&nbsp;This Privacy Policy explains how Manachoice ("we", "us", or "our") collects, uses, and discloses information about you when you use our mobile application (the "App") and the services offered through the App.</p>
+    <p class="card-text fst-italic fs-6 fw-bold"> &nbsp;&nbsp;&nbsp;&nbsp;This Privacy Policy explains how Manachoice ("we", "us", or "our") collects, uses, and discloses information about you when you use our mobile application (the "App") and the services offered through the App.</p>
     <h4>Information We Collect</h4>
     <ul>
       👉 When you register as a seller or buyer on our App, we collect information such as your name, phone number, and address.<br>
@@ -29,13 +29,13 @@ const Information = () => {
     👉 Business Transfers: If we are involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.<br>
     </ul>
     <h3>Your Choices</h3>
-    <p class="card-text fst-italic fs-5 fw-bold">&nbsp;&nbsp;&nbsp;&nbsp;You may choose not to provide certain information, but this may limit your ability to use certain features of the App. You can also control how we collect and use certain types of information through your device settings and preferences.</p>
+    <p class="card-text fst-italic fs-6 fw-bold">&nbsp;&nbsp;&nbsp;&nbsp;You may choose not to provide certain information, but this may limit your ability to use certain features of the App. You can also control how we collect and use certain types of information through your device settings and preferences.</p>
     <h3>Data Security</h3>
-    <p class="card-text fst-italic fs-5 fw-bold">&nbsp;&nbsp;&nbsp;&nbsp;We take reasonable measures to protect your information from unauthorized access, disclosure, alteration, and destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
+    <p class="card-text fst-italic fs-6 fw-bold">&nbsp;&nbsp;&nbsp;&nbsp;We take reasonable measures to protect your information from unauthorized access, disclosure, alteration, and destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
     <h3>Changes to this Privacy Policy</h3>
-    <p class="card-text fst-italic fs-5 fw-bold">&nbsp;&nbsp;&nbsp;&nbsp;We may update this Privacy Policy from time to time. If we make material changes to this Privacy Policy, we will notify you by email or through the App.</p>
+    <p class="card-text fst-italic fs-6 fw-bold">&nbsp;&nbsp;&nbsp;&nbsp;We may update this Privacy Policy from time to time. If we make material changes to this Privacy Policy, we will notify you by email or through the App.</p>
     <h3>Contact Us</h3>
-    <p class="card-text fst-italic fs-5 fw-bold">&nbsp;&nbsp;&nbsp;&nbsp;If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:contact@manaChoice1493@gmail.com">contact@manaChoice1493@gmail.com</a>.</p>
+    <p class="card-text fst-italic fs-6 fw-bold">&nbsp;&nbsp;&nbsp;&nbsp;If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:contact@manaChoice1493@gmail.com">contact@manaChoice1493@gmail.com</a>.</p>
   `;
   const [showPrivacy, setShowPrivacy] = useState(false);
 
@@ -45,13 +45,13 @@ const Information = () => {
   return (
     <div className={`${styles.main_img} p-3`}>
       <div className={`${styles.image} border border-3 border-info rounded`}>
-        <div className={`p-4 pb-4 ${styles.image_overlay}`}>
+        <div className={`p-2 pb-4 ${styles.image_overlay}`}>
           <div class="border-info mb-3 border-2">
             <div class="card-header ">
               <h3 className="fw-bolder">What We Do</h3>
             </div>
             <div class="card-body">
-              <p class="card-text fst-italic fs-5 fw-bold">
+              <p class="card-text fst-italic fs-6 fw-bold">
                 &nbsp;&nbsp;&nbsp;&nbsp;We offer high-quality organic
                 vegetables, fruits, food items, and groceries to our customers.
                 At manaChoice, we are dedicated to building a better future!
@@ -64,7 +64,7 @@ const Information = () => {
               <h3 className="fw-bolder">About Us</h3>
             </div>
             <div class="card-body ">
-              <p class="card-text fst-italic fs-5 fw-bold">
+              <p class="card-text fst-italic fs-6 fw-bold">
                 &nbsp;&nbsp;&nbsp;&nbsp;We are a team of passionate individuals
                 dedicated to promoting organic farming. manaChoice is a startup
                 company registered in Pakala, India. Utilizing emerging
@@ -83,7 +83,7 @@ const Information = () => {
               <h3 className="fw-bolder">Privacy Policy</h3>
             </div>
             <div class="card-body ">
-              <p class="card-text fst-italic fs-5 fw-bold">
+              <p class="card-text fst-italic fs-6 fw-bold">
                 <div
                   dangerouslySetInnerHTML={{
                     __html: !showPrivacy
@@ -115,7 +115,7 @@ const Information = () => {
               <h3 className="fw-bolder">Contact Us</h3>
             </div>
             <div class="card-body ">
-              <p class="card-text fst-italic fs-5 fw-bold">
+              <p class="card-text fst-italic fs-6 fw-bold">
                 &nbsp;&nbsp;&nbsp;&nbsp;If you have any questions or inquiries,
                 feel free to reach out to us.
               </p>
@@ -127,7 +127,7 @@ const Information = () => {
               <h3 className="fw-bolder">Careers</h3>
             </div>
             <div class="card-body">
-              <p class="card-text fst-italic fs-5 fw-bold">
+              <p class="card-text fst-italic fs-6 fw-bold">
                 &nbsp;&nbsp;&nbsp;&nbsp;Join our team and contribute to our
                 mission of sustainable agriculture.
               </p>
