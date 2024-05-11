@@ -70,7 +70,7 @@
   background-color: #323232;
   overflow: hidden;
   position: relative;
-  min-height: 200px;
+  min-height: 30vh;
 }
 
 .agCoursesItemLink:hover,
@@ -99,12 +99,18 @@
 
 .agCoursesItemDateBox {
   font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 1.2rem;
   color: #fff;
   z-index: 2;
   position: relative;
 }
 
 .agCoursesItemDate {
+  font-size: x-large;
+  line-height: 4vh;
+  word-spacing: 5px;
+  font-family: Raleway;
   color: rgb(245, 206, 69);
   -webkit-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
@@ -148,14 +154,15 @@
   }
   .agCoursesItemTitle {
     min-height: 52px;
-    line-height: 1;
+    line-height: 5vh;
     font-size: 24px;
   }
   .agCoursesItemLink {
     padding: 22px 40px;
   }
   .agCoursesItemDateBox {
-    font-size: 16px;
+    letter-spacing: 2px;
+    font-size: 22px;
   }
   .agCoursesBox {
     padding: 0%;

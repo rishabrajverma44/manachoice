@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import AccountModal from "../../modals/AccountModal";
 import PrivacyPolicy from "../../modals/PrivacyPolicy";
@@ -9,6 +9,22 @@ const Header = () => {
   const toggleMenu = () => {
     setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMenuOpen && window.innerWidth <= 767) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (window.innerWidth <= 767) {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMenuOpen]);
 
   return (
     <div className="nav w-100 p-3">

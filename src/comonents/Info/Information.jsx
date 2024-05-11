@@ -29,13 +29,13 @@ const Information = () => {
       <li>Business Transfers: If we are involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</li>
     </ul>
     <h3>Your Choices</h3>
-    <h5>&nbsp;&nbsp;&nbsp;&nbsp;You may choose not to provide certain information, but this may limit your ability to use certain features of the App. You can also control how we collect and use certain types of information through your device settings and preferences.</h5>
+    <p class="card-text fst-italic fs-5">&nbsp;&nbsp;&nbsp;&nbsp;You may choose not to provide certain information, but this may limit your ability to use certain features of the App. You can also control how we collect and use certain types of information through your device settings and preferences.</p>
     <h3>Data Security</h3>
-    <h5>&nbsp;&nbsp;&nbsp;&nbsp;We take reasonable measures to protect your information from unauthorized access, disclosure, alteration, and destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</h5>
+    <p class="card-text fst-italic fs-5">&nbsp;&nbsp;&nbsp;&nbsp;We take reasonable measures to protect your information from unauthorized access, disclosure, alteration, and destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
     <h3>Changes to this Privacy Policy</h3>
-    <h5>&nbsp;&nbsp;&nbsp;&nbsp;We may update this Privacy Policy from time to time. If we make material changes to this Privacy Policy, we will notify you by email or through the App.</p>
+    <p class="card-text fst-italic fs-5">&nbsp;&nbsp;&nbsp;&nbsp;We may update this Privacy Policy from time to time. If we make material changes to this Privacy Policy, we will notify you by email or through the App.</p>
     <h3>Contact Us</h3>
-    <h5>&nbsp;&nbsp;&nbsp;&nbsp;If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:contact@manaChoice1493@gmail.com">contact@manaChoice1493@gmail.com</a>.</h5>
+    <p class="card-text fst-italic fs-5">&nbsp;&nbsp;&nbsp;&nbsp;If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:contact@manaChoice1493@gmail.com">contact@manaChoice1493@gmail.com</a>.</p>
   `;
   const [showPrivacy, setShowPrivacy] = useState(false);
 
