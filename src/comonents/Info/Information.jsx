@@ -3,7 +3,7 @@ import styles from "./Information.module.css";
 
 const Information = () => {
   const content = `
-    <h5> &nbsp;&nbsp;&nbsp;&nbsp;This Privacy Policy explains how Manachoice ("we", "us", or "our") collects, uses, and discloses information about you when you use our mobile application (the "App") and the services offered through the App.</h5>
+    <p class="card-text fst-italic fs-5"> &nbsp;&nbsp;&nbsp;&nbsp;This Privacy Policy explains how Manachoice ("we", "us", or "our") collects, uses, and discloses information about you when you use our mobile application (the "App") and the services offered through the App.</p>
     <h4>Information We Collect</h4>
     <ul>
       <li>When you register as a seller or buyer on our App, we collect information such as your name, phone number, and address.</li>
@@ -28,13 +28,13 @@ const Information = () => {
       <li>Service Providers: We may share your information with third-party service providers who perform services on our behalf, such as payment processing, order fulfillment, and analytics.</li>
       <li>Business Transfers: If we are involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</li>
     </ul>
-    <h4>Your Choices</h4>
+    <h3>Your Choices</h3>
     <h5>&nbsp;&nbsp;&nbsp;&nbsp;You may choose not to provide certain information, but this may limit your ability to use certain features of the App. You can also control how we collect and use certain types of information through your device settings and preferences.</h5>
-    <h4>Data Security</h4>
+    <h3>Data Security</h3>
     <h5>&nbsp;&nbsp;&nbsp;&nbsp;We take reasonable measures to protect your information from unauthorized access, disclosure, alteration, and destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</h5>
-    <h4>Changes to this Privacy Policy</h4>
+    <h3>Changes to this Privacy Policy</h3>
     <h5>&nbsp;&nbsp;&nbsp;&nbsp;We may update this Privacy Policy from time to time. If we make material changes to this Privacy Policy, we will notify you by email or through the App.</p>
-    <h4>Contact Us</h4>
+    <h3>Contact Us</h3>
     <h5>&nbsp;&nbsp;&nbsp;&nbsp;If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:contact@manaChoice1493@gmail.com">contact@manaChoice1493@gmail.com</a>.</h5>
   `;
   const [showPrivacy, setShowPrivacy] = useState(false);
