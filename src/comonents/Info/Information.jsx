@@ -43,7 +43,7 @@ const Information = () => {
     setShowPrivacy(!showPrivacy);
   };
   return (
-    <div className="p-3">
+    <div className={`${styles.main_img} p-3`}>
       <div className={`${styles.image} border border-3 border-info rounded`}>
         <div className={`p-4 pb-4 ${styles.image_overlay}`}>
           <div class="border-info mb-3 border-2">
