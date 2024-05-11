@@ -10,11 +10,9 @@ const Cards = (props) => {
           <div className={styles.agCoursesItem}>
             <a className={styles.agCoursesItemLink}>
               <div className={styles.agCoursesItemBg}></div>
-
               <div className={styles.agCoursesItemTitle}>
                 {cardData.cardTitle}
               </div>
-
               <div
                 className={`${styles.agCoursesItemDateBox} ${styles.agCoursesItemDate}`}
               >
