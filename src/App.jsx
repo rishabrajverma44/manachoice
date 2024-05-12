@@ -12,14 +12,14 @@ import Image from "./comonents/ImageCard/Image";
 const App = () => {
   return (
     <>
-      {/* <Header />
+      <Header />
       <Hero />
       <Information />
       <Footer />
-      <ToastContainer position="bottom-right" /> */}
+      <ToastContainer position="bottom-right" />
 
-      <Header />
-      <Image />
+      {/* <Header />
+      <Image /> */}
     </>
   );
 };
