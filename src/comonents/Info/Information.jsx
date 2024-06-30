@@ -39,9 +39,6 @@ const Information = () => {
   `;
   const [showPrivacy, setShowPrivacy] = useState(false);
 
-  const toggleContent = () => {
-    setShowPrivacy(!showPrivacy);
-  };
   return (
     <div className={`${styles.main_img} p-3`}>
       <div className={`${styles.image} border border-3 border-info rounded`}>
