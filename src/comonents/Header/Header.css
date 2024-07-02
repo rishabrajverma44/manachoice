@@ -1,5 +1,5 @@
 .nav {
-  height: 12vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,6 +43,10 @@
   color: rgb(12, 35, 35);
   display: none;
   cursor: pointer;
+}
+
+.leaf-manachoice {
+  height: 24px;
 }
 
 @media screen and (max-width: 767px) {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Header.css";
 import AccountModal from "../../modals/AccountModal";
 import PrivacyPolicy from "../../modals/PrivacyPolicy";
+import leafImag from "../../utils/leaf.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,12 +28,15 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="nav w-100 p-3">
+    <div className="nav w-100 p-2">
       <div className="h-100">
         <span
           className="text-center fs-2 fw-bolder"
           style={{ color: "rgb(38,88,30)" }}
         >
+          <span>
+            <img src={leafImag} alt="leafImage" className="leaf-manachoice" />
+          </span>{" "}
           manaChoice
         </span>
       </div>

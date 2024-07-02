@@ -148,7 +148,7 @@ const AccountModal = () => {
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={formikMobile.handleSubmit}>
-            <h5 className="fw-bold"> Provide mobile for account deletion</h5>
+            <h5 className="fw-bold">Account Deletion</h5>
             <input
               type="number"
               name="mobile"
