@@ -1,0 +1,11 @@
+.text_white {
+  color: #fff;
+}
+
+.inactive-tab {
+  color: rgb(133, 194, 80) !important;
+}
+
+.active-tab {
+  color: orange !important;
+}

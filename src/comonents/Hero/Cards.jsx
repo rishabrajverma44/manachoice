@@ -8,7 +8,7 @@ const Cards = (props) => {
       <div className={styles.agFormatContainer}>
         <div className={styles.agCoursesBox}>
           <div className={styles.agCoursesItem}>
-            <a className={styles.agCoursesItemLink}>
+            <span className={styles.agCoursesItemLink}>
               <div className={styles.agCoursesItemBg}></div>
               <div className={styles.agCoursesItemTitle}>
                 {cardData.cardTitle}
@@ -18,7 +18,7 @@ const Cards = (props) => {
               >
                 {cardData.cardDes}
               </div>
-            </a>
+            </span>
           </div>
         </div>
       </div>

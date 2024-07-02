@@ -148,6 +148,7 @@ const AccountModal = () => {
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={formikMobile.handleSubmit}>
+            <h5 className="fw-bold"> Provide mobile for account deletion</h5>
             <input
               type="number"
               name="mobile"
@@ -164,15 +165,17 @@ const AccountModal = () => {
             {formikMobile.touched.mobile && formikMobile.errors.mobile && (
               <div className="text-danger">{formikMobile.errors.mobile}</div>
             )}
-            <button
-              type="submit"
-              className="btn btn-primary"
-              disabled={formikMobile.isSubmitting || isSubmitting}
-            >
-              {formikMobile.isSubmitting || isSubmitting
-                ? "Submitting..."
-                : "Submit"}
-            </button>
+            <div className="d-flex justify-content-center mt-2">
+              <button
+                type="submit"
+                className="btn btn-primary"
+                disabled={formikMobile.isSubmitting || isSubmitting}
+              >
+                {formikMobile.isSubmitting || isSubmitting
+                  ? "Submitting..."
+                  : "Submit"}
+              </button>
+            </div>
           </form>
         </Modal.Body>
       </Modal>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./Header.css";
 import AccountModal from "../../modals/AccountModal";
 import PrivacyPolicy from "../../modals/PrivacyPolicy";
-import logo from "../../utils/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +29,12 @@ const Header = () => {
   return (
     <div className="nav w-100 p-3">
       <div className="h-100">
-        <img style={{ height: "100%" }} src={logo} alt="logo_img" />
+        <span
+          className="text-center fs-2 fw-bolder"
+          style={{ color: "rgb(38,88,30)" }}
+        >
+          manaChoice
+        </span>
       </div>
       <div>
         <ul id="navbar" className={`navbar ${!isMenuOpen ? "active" : ""}`}>
