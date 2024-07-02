@@ -28,7 +28,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="nav w-100 p-2">
+    <div className="nav w-100 p-2 mt-2">
       <div className="h-100">
         <span
           className="text-center fs-2 fw-bolder"
