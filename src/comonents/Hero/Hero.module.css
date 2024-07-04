@@ -17,6 +17,7 @@
 }
 .install_button {
   display: flex;
+  align-items: center;
   padding-inline: 30px;
   color: white;
   background-color: rgb(20, 56, 56);

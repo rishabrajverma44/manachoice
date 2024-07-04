@@ -47,12 +47,19 @@ const Hero = () => {
           </h1>
         </div>
         <div className="d-flex justify-content-center mt-4">
-          <button class={styles.install_button}>
-            <a href="https://play.google.com/store">
-              <FontAwesomeIcon icon={faGooglePlay} size="2x" />
-            </a>
-            <span className="h-100 d-flex align-items-center">Install Now</span>
-          </button>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.manachoice"
+            style={{ textDecoration: "none" }}
+          >
+            {" "}
+            <button class={styles.install_button}>
+              <a href="https://play.google.com/store">
+                <FontAwesomeIcon icon={faGooglePlay} size="2x" />
+              </a>
+
+              <span className="h-100">Install Now</span>
+            </button>{" "}
+          </a>
         </div>
       </div>
       <div className="cards p-4">
