@@ -28,11 +28,21 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="nav w-100 p-0 px-4 mt-2">
-      <div className="h-100">
+    <div className="nav w-100 p-0 px-4">
+      <div
+        className="h-100"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <span
           className="text-center fs-2 fw-bolder"
-          style={{ color: "rgb(38,88,30)" }}
+          style={{
+            color: "rgb(38,88,30)",
+            cursor: "pointer",
+          }}
         >
           <span>
             <img src={leafImag} alt="leafImage" className="leaf-manachoice" />
@@ -40,6 +50,7 @@ const Header = () => {
           manaChoice
         </span>
       </div>
+
       <div>
         <ul id="navbar" className={`navbar ${!isMenuOpen ? "active" : ""}`}>
           <li>
@@ -50,6 +61,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
+
       <div id="mobile" onClick={toggleMenu}>
         {isMenuOpen ? (
           <i className="fas fa-times fs-1"></i>
