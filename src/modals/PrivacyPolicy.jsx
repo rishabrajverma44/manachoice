@@ -19,7 +19,6 @@ const PrivacyPolicy = () => {
             <div className="modal-content">
               <div className="modal-header">
                 <h1 className="modal-title fs-5">
-                  manaChoice
                   <span>
                     <img
                       src={leafImag}
@@ -27,6 +26,7 @@ const PrivacyPolicy = () => {
                       className={styles.leafImag}
                     />
                   </span>
+                  <span style={{ color: "rgb(38, 88, 30)" }}>manaChoice</span>
                 </h1>
                 <button
                   type="button"

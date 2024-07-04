@@ -140,9 +140,9 @@ const AccountModal = () => {
       >
         <Modal.Header closeButton>
           <Modal.Title className={styles.title}>
-            manaChoice
             <span>
               <img src={leafImag} alt="leafImage" className={styles.leafImag} />
+              <span style={{ color: "rgb(38, 88, 30)" }}>manaChoice</span>
             </span>
           </Modal.Title>
         </Modal.Header>
